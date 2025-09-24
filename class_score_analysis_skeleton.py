@@ -15,7 +15,7 @@ def calc_weighted_average(data_2d, weight):
     # TODO) Calculate the weighted averages of each row of `data_2d`
     average = []
     for i in data_2d:
-        average.append((i[0]*weight[0]+i[1]*weight[1])/2)
+        average.append((i[0]*weight[0]+i[1]*weight[1]))
     return average
 
 def analyze_data(data_1d):
