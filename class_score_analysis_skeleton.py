@@ -5,7 +5,7 @@ def read_data(filename):
         for line in f.readlines():
             try:
                 if(line):
-                    scores = [float(s) for s in line.split(',')]
+                    scores = [float(s) for s in line.strip().split(',')]
                     data.append(scores)
             except ValueError as ex:
                 continue
