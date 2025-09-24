@@ -24,11 +24,9 @@ def analyze_data(data_1d):
     n = len(data_1d)
     mean = sum(data_1d)/n
     var = sum((score-mean)**2 for score in data_1d)/n
-    if (n%2==1):    
-        median = data_1d[n//2]
-    elif (n%2==0):
-        median = (data_1d[n/2]+data_1d[n/2+1])/2
-    
+    vals = sorted(data_1d)
+    mid = n // 2
+    median = vals[mid] if n % 2 == 1 else (vals[mid-1] + vals[mid]) / 2
     return mean, var, median, min(data_1d), max(data_1d)
 
 if __name__ == '__main__':
